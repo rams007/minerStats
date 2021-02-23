@@ -15,7 +15,18 @@ class CreateMiningStatsTable extends Migration
     {
         Schema::create('mining_stats', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('wallet_id')->index();
+            $table->timestamp('time');
+            $table->double('reported_hashrate');
+            $table->double('current_hashrate');
+            $table->unsignedInteger('valid_shares');
+            $table->unsignedInteger('invalid_shares');
+            $table->unsignedInteger('stale_shares');
+            $table->double('average_hashrate');
+            $table->unsignedInteger('active_workers');
             $table->timestamps();
+            $table->foreign('wallet_id')->references('id')->on('wallets');
+            $table->unique(['wallet_id','time']);
         });
     }
 
