@@ -80,7 +80,33 @@
                 $('input[name="daterange"]').daterangepicker({
                     opens: 'left'
                 }, function (start, end, label) {
-                    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                    var postData = {
+                        _token: '{{csrf_token()}}',
+                        walletId: $('#selectedWallet').val(),
+                        startDate: start.format('YYYY-MM-DD'),
+                        endDate: end.format('YYYY-MM-DD')
+                    };
+
+
+                    $.post("/graph_data", postData, function () {
+
+                    })
+                        .done(function (result) {
+                            // alert( "second success" );
+                            data[0].values = result.currentHashrates;
+                            data[1].values = result.averageHashrates;
+                            data[2].values = result.activeWorkers;
+                            data[3].values = result.validShares;
+                            data[4].values = result.staleShares;
+
+                            chart.update();
+
+                        })
+                        .fail(function () {
+                            alert("error");
+                        });
+
+
                 });
             });
         </script>
@@ -154,7 +180,6 @@
                     cos = [],
                     rand = [],
                     rand2 = []
-                ;
 
                 for (var i = 0; i < 100; i++) {
                     sin.push({x: i, y: i % 10 == 5 ? null : Math.sin(i / 10)}); //the nulls are to show how defined works
@@ -166,12 +191,9 @@
 
                 return [
                     {
-                        area: true,
                         values: {!! $currentHashrates !!},
                         key: "Current Hashrate",
                         color: "#ff7f0e",
-                        strokeWidth: 4,
-                        classed: 'dashed'
                     },
                     {
                         values:{!! $averageHashrates !!},
@@ -181,7 +203,8 @@
                     {
                         values: {!! $activeWorkers !!},
                         key: "Active workers",
-                        color: "#2222ff"
+                        color: "#2222ff",
+                        area: true
                     },
                     {
                         values: {!! $validShares !!},

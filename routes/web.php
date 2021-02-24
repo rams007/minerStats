@@ -46,3 +46,4 @@ Route::get('/profile', function () {
 });
 Route::get('/logout', 'AuthController@doLogout');
 
+Route::post('/graph_data', 'PagesController@getData');
