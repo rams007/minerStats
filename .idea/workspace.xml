@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7566b2f2-8fa2-48db-b58f-138516993d1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/forgot_password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/auth.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/minerStats.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minerStats.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/daterangepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/nv.d3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/d3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/daterangepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/nv.d3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layout/main.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,14 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,11 +160,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp7\htdocs\minerStats\public\js" />
+      <recent name="C:\xampp7\htdocs\minerStats\public\css" />
       <recent name="C:\xampp7\htdocs\minerStats\resources\views" />
     </key>
   </component>
@@ -195,7 +206,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614092589420</updated>
-      <workItem from="1614092591065" duration="16310000" />
+      <workItem from="1614092591065" duration="21205000" />
     </task>
     <servers />
   </component>
@@ -211,10 +222,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614166682533" />
-    <state x="674" y="437" key="NewPhpFileDialog" timestamp="1614166440909">
+    <state x="674" y="437" key="NewPhpFileDialog" timestamp="1614178290345">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="674" y="437" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614166440909" />
+    <state x="674" y="437" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614178290345" />
     <state x="486" y="124" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614177797998">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

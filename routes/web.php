@@ -36,3 +36,13 @@ Route::post('/forgot_password', 'AuthController@doPasswordRecovery');
 Route::get('/reset-password/{token}', function ($token) {
     return view('reset_password', ['token' => $token]);
 })->middleware('guest')->name('password.reset');
+
+
+Route::get('/dashboard', 'PagesController@dashboard');
+
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/logout', 'AuthController@doLogout');
+
