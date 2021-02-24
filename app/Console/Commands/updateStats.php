@@ -87,6 +87,8 @@ class updateStats extends Command
                     Log::error('Cant convert response. Response = ' . $historyData);
                 }
             }
+            $wallet->checked_at= date('Y-m-d H:i:s');
+            $wallet->save();
         }
     }
 }
