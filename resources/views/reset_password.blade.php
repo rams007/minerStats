@@ -23,7 +23,7 @@
                                     {{csrf_field()}}
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
-                                               id="email"  name="email"
+                                               id="email" name="email"
                                                placeholder="Enter Email Address...">
                                         @if(session('errors'))
                                             <span class="error"> {{session('errors')->first('email') }} </span>
