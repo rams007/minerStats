@@ -121,13 +121,14 @@
 
                 // chart sub-models (ie. xAxis, yAxis, etc) when accessed directly, return themselves, not the parent chart, so need to chain separately
                 chart.xAxis
-                    .axisLabel("Time (s)")
-                    .tickFormat(d3.format(',.1f'))
-                    .staggerLabels(true)
-                ;
+                    .axisLabel("Date")
+                    .tickFormat(function (d) {
+                        return d3.time.format('%b %d %H:%M')(new Date(d));
+                    })
+                    .staggerLabels(true);
 
                 chart.yAxis
-                    .axisLabel('Voltage (v)')
+                    .axisLabel('Values')
                     .tickFormat(function (d) {
                         if (d == null) {
                             return 'N/A';
@@ -166,32 +167,32 @@
                 return [
                     {
                         area: true,
-                        values: sin,
-                        key: "Sine Wave",
+                        values: {!! $currentHashrates !!},
+                        key: "Current Hashrate",
                         color: "#ff7f0e",
                         strokeWidth: 4,
                         classed: 'dashed'
                     },
                     {
-                        values: cos,
-                        key: "Cosine Wave",
+                        values:{!! $averageHashrates !!},
+                        key: "Average Hashrate",
                         color: "#2ca02c"
                     },
                     {
-                        values: rand,
-                        key: "Random Points",
+                        values: {!! $activeWorkers !!},
+                        key: "Active workers",
                         color: "#2222ff"
                     },
                     {
-                        values: rand2,
-                        key: "Random Cosine",
+                        values: {!! $validShares !!},
+                        key: "Valid Shares",
                         color: "#667711",
                         strokeWidth: 3.5
                     },
                     {
                         area: true,
-                        values: sin2,
-                        key: "Fill opacity",
+                        values: {!! $staleShares !!},
+                        key: "Stale shares",
                         color: "#EF9CFB",
                         fillOpacity: .1
                     }

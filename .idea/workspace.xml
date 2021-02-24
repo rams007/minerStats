@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7566b2f2-8fa2-48db-b58f-138516993d1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/nv.d3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/d3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/daterangepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/nv.d3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layout/main.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614092589420</updated>
-      <workItem from="1614092591065" duration="21205000" />
+      <workItem from="1614092591065" duration="23890000" />
     </task>
     <servers />
   </component>
@@ -222,6 +213,54 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614166682533" />
+    <state width="1637" height="336" key="GridCell.Tab.0.bottom" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.0.center" timestamp="1614185593064">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593064" />
+    <state width="1637" height="336" key="GridCell.Tab.0.left" timestamp="1614185593064">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593064" />
+    <state width="1637" height="336" key="GridCell.Tab.0.right" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.2.bottom" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.2.center" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.2.left" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
+    <state width="1637" height="336" key="GridCell.Tab.2.right" timestamp="1614185593065">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593065" />
     <state x="674" y="437" key="NewPhpFileDialog" timestamp="1614178290345">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -230,5 +269,9 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="486" y="124" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1614177797998" />
+    <state x="539" y="261" width="601" height="488" key="find.popup" timestamp="1614185593032">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="539" y="261" width="601" height="488" key="find.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1614185593032" />
   </component>
 </project>
