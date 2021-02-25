@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Helpers\EthereumValidator;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -172,8 +173,16 @@ class PagesController extends Controller
 
     }
 
-    public function contactUs (Request $request){
+    public function contactUs(Request $request)
+    {
 
 
+        $t = Mail::send('mail.contactus', ['name' => $request->name, 'email' => $request->email, 'subject' => $request->subject,
+            'msg' => $request->message], function ($m) {
+            $m->from('support@miner-stats.com', 'support bot');
+            $m->to('sramsiks@gmail.com')->subject('Contact us request');
+        });
+
+        var_dump($t);
     }
 }
