@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7566b2f2-8fa2-48db-b58f-138516993d1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/contactus.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/minerStats.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minerStats.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +142,19 @@
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/vendor/kornrunner/keccak" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/mailgun/mailgun-php" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/php-http/multipart-stream-builder" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/vendor/kriswallsmith/buzz" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ot4X8ieIKE3gDuqanGCHaQzCQF" />
@@ -199,7 +215,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614092589420</updated>
-      <workItem from="1614092591065" duration="40860000" />
+      <workItem from="1614092591065" duration="42878000" />
     </task>
     <servers />
   </component>
@@ -215,54 +231,54 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614166682533" />
-    <state width="1637" height="336" key="GridCell.Tab.0.bottom" timestamp="1614274242019">
+    <state width="1637" height="336" key="GridCell.Tab.0.bottom" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614274242019" />
-    <state width="1637" height="336" key="GridCell.Tab.0.center" timestamp="1614274242019">
+    <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.0.center" timestamp="1614276187694">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614274242019" />
-    <state width="1637" height="336" key="GridCell.Tab.0.left" timestamp="1614274242017">
+    <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187694" />
+    <state width="1637" height="336" key="GridCell.Tab.0.left" timestamp="1614276187694">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614274242017" />
-    <state width="1637" height="336" key="GridCell.Tab.0.right" timestamp="1614274242019">
+    <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187694" />
+    <state width="1637" height="336" key="GridCell.Tab.0.right" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614274242019" />
-    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1614274264675">
+    <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614274264675" />
-    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1614274264674">
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614274264674" />
-    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1614274264674">
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614274264674" />
-    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1614274264674">
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614274264674" />
-    <state width="1637" height="336" key="GridCell.Tab.2.bottom" timestamp="1614274241629">
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.2.bottom" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.2.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614274241629" />
-    <state width="1637" height="336" key="GridCell.Tab.2.center" timestamp="1614274241629">
+    <state width="1637" height="336" key="GridCell.Tab.2.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.2.center" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.2.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614274241629" />
-    <state width="1637" height="336" key="GridCell.Tab.2.left" timestamp="1614274241628">
+    <state width="1637" height="336" key="GridCell.Tab.2.center/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.2.left" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.2.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614274241628" />
-    <state width="1637" height="336" key="GridCell.Tab.2.right" timestamp="1614274241629">
+    <state width="1637" height="336" key="GridCell.Tab.2.left/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
+    <state width="1637" height="336" key="GridCell.Tab.2.right" timestamp="1614276187695">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.2.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614274241629" />
+    <state width="1637" height="336" key="GridCell.Tab.2.right/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187695" />
     <state x="622" y="340" key="NewPhpClassDialog" timestamp="1614253363826">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -275,30 +291,9 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="486" y="124" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1614271543944" />
-    <state x="539" y="261" width="601" height="488" key="find.popup" timestamp="1614271580873">
+    <state x="539" y="261" width="601" height="488" key="find.popup" timestamp="1614276187561">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="539" y="261" width="601" height="488" key="find.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1614271580873" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php</url>
-          <line>176</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php</url>
-          <line>179</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php</url>
-          <line>182</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="539" y="261" width="601" height="488" key="find.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1614276187561" />
   </component>
 </project>

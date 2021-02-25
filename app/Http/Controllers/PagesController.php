@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Helpers\EthereumValidator;
 use Illuminate\Support\Facades\Mail;
+use Mailgun\Mailgun;
 
 class PagesController extends Controller
 {
@@ -167,22 +168,36 @@ class PagesController extends Controller
             default:
                 return response()->json(['error' => true, 'msg' => 'Unknown Action']);
                 break;
-
-
         }
 
     }
 
     public function contactUs(Request $request)
     {
+        try {
 
+            $html = view('mail.contactus', ['name' => $request->name, 'email' => $request->email, 'subject' => $request->subject,
+                'msg' => $request->message])->render();
 
-        $t = Mail::send('mail.contactus', ['name' => $request->name, 'email' => $request->email, 'subject' => $request->subject,
-            'msg' => $request->message], function ($m) {
-            $m->from('support@miner-stats.com', 'support bot');
-            $m->to('sramsiks@gmail.com')->subject('Contact us request');
-        });
+            $mgClient = Mailgun::create(env('MAILGUN_SECRET'), env('MAILGUN_ENDPOINT'));
+            $domain = env('MAILGUN_DOMAIN');
+            $params = array(
+                'from' => 'support@miner-stats.com',
+                'to' => 'sramsiks@gmail.com',
+                'subject' => 'Contact us request',
+                'html' => $html
+            );
 
-        var_dump($t);
+            $result = $mgClient->messages()->send($domain, $params);
+
+            if ($result->getMessage() == 'Queued. Thank you.') {
+                echo 'OK';
+            } else {
+                echo 'Message not sended.' . $result->getMessage();
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+
     }
 }
