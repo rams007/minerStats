@@ -87,18 +87,15 @@
 
             $.post("/wallet_actions", postData, function () {
 
+            }).done(function (result) {
+                if (result.error == false) {
+                    window.location.reload();
+                } else {
+                    toastr.error(result.msg)
+                }
             })
-                .done(function (result) {
-                    // alert( "second success" );
-                    if (result.error == false) {
-                        window.location.reload();
-                    } else {
-                        alert(result.msg);
-                    }
-
-                })
                 .fail(function () {
-                    alert("error");
+                    toastr.error('Cant update graph data');
                 });
 
         }
@@ -114,20 +111,16 @@
 
             $.post("/wallet_actions", postData, function () {
 
+            }).done(function (result) {
+                if (result.error == false) {
+                    window.location.reload();
+                } else {
+                    toastr.error(result.msg)
+                }
             })
-                .done(function (result) {
-                    // alert( "second success" );
-                    //
-                    if (result.error == false) {
-                        window.location.reload();
-                    } else {
-                        alert(result.msg);
-                    }
-                })
                 .fail(function () {
-                    alert("error");
+                    toastr.error('Cant update graph data');
                 });
-
         }
 
 

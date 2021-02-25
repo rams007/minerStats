@@ -103,7 +103,7 @@
 
                         })
                         .fail(function () {
-                            alert("error");
+                            toastr.error('Cant update graph data');
                         });
 
 
