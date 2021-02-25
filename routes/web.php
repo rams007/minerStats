@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,4 +51,25 @@ Route::post('/graph_data', 'PagesController@getData');
 Route::get('/wallets', 'PagesController@showWallets');
 Route::post('/wallet_actions', 'PagesController@doWalletActions');
 Route::post('/contact_us', 'PagesController@contactUs');
+
+
+Route::get('/auth/google/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/auth/google/callback', function () {
+    $user = Socialite::driver('google')->user();
+
+   var_dump($user);
+});
+
+Route::get('/auth/fb/redirect', function () {
+    return Socialite::driver('facebook')->redirect();
+});
+
+Route::get('/auth/fb/callback', function () {
+    $user = Socialite::driver('facebook')->user();
+
+    var_dump($user);
+});
 
