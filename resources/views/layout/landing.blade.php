@@ -32,7 +32,15 @@
     <!-- =======================================================
     * Template Name: OnePage - v2.2.2
     ======================================================== -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPQCX13SY7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-GPQCX13SY7');
+    </script>
 </head>
 
 <body>
