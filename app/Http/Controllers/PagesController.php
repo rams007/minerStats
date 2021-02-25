@@ -6,6 +6,7 @@ use App\Wallets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Http\Helpers\EthereumValidator;
 
 class PagesController extends Controller
 {
@@ -16,6 +17,12 @@ class PagesController extends Controller
             return redirect('/login');
         }
         $allWallets = Wallets::where('user_id', $user->id)->get(['id', 'wallet']);
+        foreach ($allWallets as $wallet) {
+            $trimed = substr($wallet->wallet, 0, 5);
+            $trimed .= '****';
+            $trimed .= substr($wallet->wallet, -5, 5);
+            $wallet->wallet = $trimed;
+        }
         $today = date('m/d/Y');
         $weekAgoTs = time() - 604800;
         $date1weekAgo = date('m/d/Y', $weekAgoTs);
@@ -99,4 +106,70 @@ class PagesController extends Controller
         ]);
 
     }
+
+    public function showWallets()
+    {
+        $user = Auth::user();
+        if (!$user) {
+            return redirect('/login');
+        }
+        $allWallets = Wallets::where('user_id', $user->id)->get(['id', 'wallet']);
+        foreach ($allWallets as $wallet) {
+            $trimed = substr($wallet->wallet, 0, 5);
+            $trimed .= '****';
+            $trimed .= substr($wallet->wallet, -5, 5);
+            $wallet->wallet = $trimed;
+        }
+
+        return view('wallets', ['allWallets' => $allWallets]);
+    }
+
+    public function doWalletActions(Request $request)
+    {
+        $user = Auth::user();
+        if (!$user) {
+            return response()->json(['error' => true, 'msg' => 'User not logined']);
+        }
+
+        $validator = new EthereumValidator();
+        switch ($request->action) {
+            case 'add':
+                try {
+                    if ($validator->isAddress($request->wallet)) {
+                        Wallets::create([
+                            'user_id' => $user->id,
+                            'wallet' => $request->wallet
+                        ]);
+                        return response()->json(['error' => false, 'msg' => 'Added']);
+                    } else {
+                        return response()->json(['error' => true, 'msg' => 'Adress not valid']);
+                    }
+
+
+                } catch (\Exception $e) {
+                    return response()->json(['error' => true, 'msg' => $e->getMessage()]);
+                }
+
+                break;
+
+            case 'delete':
+
+                $walletRecord = Wallets::where('id', $request->walletId)->where('user_id', $user->id)->first();
+                if ($walletRecord) {
+                    $walletRecord->delete();
+                    return response()->json(['error' => false, 'msg' => 'Deleted']);
+                } else {
+                    return response()->json(['error' => true, 'msg' => 'Record not found']);
+                }
+                break;
+
+            default:
+                return response()->json(['error' => true, 'msg' => 'Unknown Action']);
+                break;
+
+
+        }
+
+    }
+
 }

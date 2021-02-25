@@ -25,7 +25,7 @@ class CreateMiningStatsTable extends Migration
             $table->double('average_hashrate');
             $table->unsignedInteger('active_workers');
             $table->timestamps();
-            $table->foreign('wallet_id')->references('id')->on('wallets');
+            $table->foreign('wallet_id')->references('id')->on('wallets')->onDelete('cascade');
             $table->unique(['wallet_id','time']);
         });
     }

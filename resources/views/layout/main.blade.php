@@ -44,6 +44,12 @@
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/wallets">
+                <i class="fas fa-fw fa-wallet"></i>
+                <span>Wallets</span></a>
+        </li>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider">

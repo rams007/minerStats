@@ -47,3 +47,5 @@ Route::get('/profile', function () {
 Route::get('/logout', 'AuthController@doLogout');
 
 Route::post('/graph_data', 'PagesController@getData');
+Route::get('/wallets', 'PagesController@showWallets');
+Route::post('/wallet_actions', 'PagesController@doWalletActions');
