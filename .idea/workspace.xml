@@ -2,14 +2,108 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7566b2f2-8fa2-48db-b58f-138516993d1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/toastr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/toastr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/about-video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/clients/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/clients/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/clients/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/clients/client-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/clients/client-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/clients/client-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-details-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-details-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/portfolio/portfolio-details-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/team/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/team/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/team/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/team/team-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/testimonials/testimonials-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/testimonials/testimonials-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/testimonials/testimonials-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/testimonials/testimonials-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/testimonials/testimonials-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/aos/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/aos/aos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/animations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/boxicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/boxicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/transformations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/counterup/counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/icofont/fonts/icofont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/icofont/fonts/icofont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/icofont/icofont.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/isotope-layout/isotope.pkgd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/isotope-layout/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easing/jquery.easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/owl.carousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/php-email-form/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.symbol.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/remixicon/remixicon.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/venobox/venobox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/venobox/venobox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/venobox/venobox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/venobox/venobox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendor/waypoints/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layout/landing.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wallets.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wallets.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,12 +251,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp7\htdocs\minerStats\public" />
       <recent name="C:\xampp7\htdocs\minerStats\resources\views" />
       <recent name="C:\xampp7\htdocs\minerStats\public\js" />
       <recent name="C:\xampp7\htdocs\minerStats\public\css" />
@@ -203,7 +298,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614092589420</updated>
-      <workItem from="1614092591065" duration="33309000" />
+      <workItem from="1614092591065" duration="36994000" />
     </task>
     <servers />
   </component>
@@ -271,10 +366,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="622" y="340" key="NewPhpClassDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614253363826" />
-    <state x="674" y="437" key="NewPhpFileDialog" timestamp="1614178290345">
+    <state x="674" y="437" key="NewPhpFileDialog" timestamp="1614259852129">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="674" y="437" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614178290345" />
+    <state x="674" y="437" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614259852129" />
     <state x="486" y="124" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614177797998">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

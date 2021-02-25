@@ -172,4 +172,8 @@ class PagesController extends Controller
 
     }
 
+    public function contactUs (Request $request){
+
+
+    }
 }
