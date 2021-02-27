@@ -57,11 +57,7 @@ Route::get('/auth/google/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
 
-Route::get('/auth/google/callback', function () {
-    $user = Socialite::driver('google')->user();
-
-   var_dump($user);
-});
+Route::get('/auth/google/callback', 'AuthController@handleGoogleCallback');
 
 Route::get('/auth/fb/redirect', function () {
     return Socialite::driver('facebook')->redirect();

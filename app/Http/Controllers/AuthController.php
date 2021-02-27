@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -107,4 +109,68 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function handleGoogleCallback(Request $request)
+    {
+        try {
+            $user = Socialite::driver('google')->user();
+
+            $firstName = 'John';
+            $lastName = 'Doe';
+            $email = '';
+            if ($user->getEmail()) {
+                $email = $user->getEmail();
+            }
+            $user->getName();
+
+
+            var_dump($user->user);
+            var_dump($user);
+
+
+            if (isset($user->user['given_name'])) {
+                $firstName = $user->user['given_name'];
+
+            } else {
+                if ($user->getName()) {
+                    $firstName = $user->getName();
+                }
+            }
+
+            if (isset($user->user['family_name'])) {
+                $lastName = $user->user['family_name'];
+            }
+
+            if (empty($email)) {
+                echo 'Email not found';
+            } else {
+
+                $user = User::where('email', $email)->first();
+
+                if ($user) {
+                    Auth::login($user);
+                    return redirect('/dashboard');
+                } else {
+
+                    $pass = Str::random(8);
+                    $user = User::create([
+                        'firstName' => $firstName,
+                        'lastName' => $lastName,
+                        'email' => $email,
+                        'password' => Hash::make($pass)
+                    ]);
+                    Auth::login($user);
+
+                    //@todo send message to user with new password
+
+
+                    return redirect('/dashboard');
+
+                }
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
 }
