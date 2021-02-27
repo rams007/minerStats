@@ -70,6 +70,6 @@ Route::get('/auth/fb/callback', function () {
 });
 
 
-Route::get('/privacy',  function ($token) {
+Route::get('/privacy',  function () {
     return view('privacy');
 });
