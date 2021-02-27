@@ -1,6 +1,6 @@
 <html>
 <head>
-    <<title>Social registration</title>
+    <title>Social registration</title>
 </head>
 
 <body>

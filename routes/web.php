@@ -69,3 +69,7 @@ Route::get('/auth/fb/callback', function () {
     var_dump($user);
 });
 
+
+Route::get('/privacy',  function ($token) {
+    return view('privacy');
+});
