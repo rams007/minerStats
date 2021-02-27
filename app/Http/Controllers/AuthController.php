@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helpers\HelperController;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -163,6 +164,10 @@ class AuthController extends Controller
 
                     //@todo send message to user with new password
 
+                    $message = view('mail.socialRegs', ['email' => $request->email, 'password' => $pass,
+                        'provider' => 'google'])->render();
+
+                    HelperController::sendMail($email, 'support@miner-stats.com', 'Registration on MinerStats.com', $message);
 
                     return redirect('/dashboard');
 

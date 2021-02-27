@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helpers\HelperController;
 use App\Wallets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,7 +37,7 @@ class PagesController extends Controller
         $staleShares = [];
         $averageHashrates = [];
         $activeWorkers = [];
-        if (!empty($allWallets)) {
+        if (count($allWallets)>0) {
 
             $sql = "SELECT time,current_hashrate,valid_shares,stale_shares,average_hashrate,active_workers
                     FROM mining_stats
@@ -179,21 +180,12 @@ class PagesController extends Controller
             $html = view('mail.contactus', ['name' => $request->name, 'email' => $request->email, 'subject' => $request->subject,
                 'msg' => $request->message])->render();
 
-            $mgClient = Mailgun::create(env('MAILGUN_SECRET'), env('MAILGUN_ENDPOINT'));
-            $domain = env('MAILGUN_DOMAIN');
-            $params = array(
-                'from' => 'support@miner-stats.com',
-                'to' => 'sramsiks@gmail.com',
-                'subject' => 'Contact us request',
-                'html' => $html
-            );
+            $sendedResult = HelperController::sendMail('sramsiks@gmail.com', 'support@miner-stats.com', 'Contact us request', $html);
 
-            $result = $mgClient->messages()->send($domain, $params);
-
-            if ($result->getMessage() == 'Queued. Thank you.') {
+            if ($sendedResult === true) {
                 echo 'OK';
             } else {
-                echo 'Message not sended.' . $result->getMessage();
+                echo 'Message not sended.' . $sendedResult;
             }
         } catch (\Exception $e) {
             echo $e->getMessage();
