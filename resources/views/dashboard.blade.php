@@ -193,12 +193,12 @@
                     {
                         values: {!! $currentHashrates !!},
                         key: "Current Hashrate",
-                        color: "#ff7f0e",
+                        color: "#1f77b4",
                     },
                     {
                         values:{!! $averageHashrates !!},
                         key: "Average Hashrate",
-                        color: "#2ca02c"
+                        color: "#fe8d2a"
                     },
                     {
                         values: {!! $activeWorkers !!},
@@ -209,7 +209,7 @@
                     {
                         values: {!! $validShares !!},
                         key: "Valid Shares",
-                        color: "#667711",
+                        color: "#c3dec1",
                         strokeWidth: 3.5
                     },
                     {
