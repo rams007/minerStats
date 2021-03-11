@@ -63,11 +63,7 @@ Route::get('/auth/fb/redirect', function () {
     return Socialite::driver('facebook')->redirect();
 });
 
-Route::get('/auth/fb/callback', function () {
-    $user = Socialite::driver('facebook')->user();
-
-    var_dump($user);
-});
+Route::get('/auth/fb/callback', 'AuthController@handleFBCallback');
 
 
 Route::get('/privacy',  function () {

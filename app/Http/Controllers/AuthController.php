@@ -124,10 +124,10 @@ class AuthController extends Controller
             }
             $user->getName();
 
-
-            var_dump($user->user);
-            var_dump($user);
-
+            /*
+                        var_dump($user->user);
+                        var_dump($user);
+            */
 
             if (isset($user->user['given_name'])) {
                 $firstName = $user->user['given_name'];
@@ -178,4 +178,69 @@ class AuthController extends Controller
         }
     }
 
+
+    public function handleFBCallback(Request $request)
+    {
+        try {
+
+            $user = Socialite::driver('facebook')->user();
+
+            $firstName = 'John';
+            $lastName = ' ';
+            $email = '';
+            if ($user->getEmail()) {
+                $email = $user->getEmail();
+            }
+            $user->getName();
+
+
+            /* var_dump($user->user);
+             var_dump($user);
+ */
+
+            if (isset($user->user['name'])) {
+                $firstName = $user->user['name'];
+
+            } else {
+                if ($user->getName()) {
+                    $firstName = $user->getName();
+                }
+            }
+
+
+            if (empty($email)) {
+                echo 'Email not found';
+            } else {
+
+                $user = User::where('email', $email)->first();
+
+                if ($user) {
+                    Auth::login($user);
+                    return redirect('/dashboard');
+                } else {
+
+                    $pass = Str::random(8);
+                    $user = User::create([
+                        'firstName' => $firstName,
+                        'lastName' => $lastName,
+                        'email' => $email,
+                        'password' => Hash::make($pass)
+                    ]);
+                    Auth::login($user);
+
+                    //@todo send message to user with new password
+
+                    $message = view('mail.socialRegs', ['email' => $request->email, 'password' => $pass,
+                        'provider' => 'FB'])->render();
+
+                    HelperController::sendMail($email, 'support@miner-stats.com', 'Registration on MinerStats.com', $message);
+
+                    return redirect('/dashboard');
+
+                }
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
