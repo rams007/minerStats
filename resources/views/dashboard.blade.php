@@ -76,6 +76,24 @@
         </style>
 
         <script>
+
+            function getIndexInGraphElement(element) {
+                console.log(this);
+               if(element.key== this){
+                   return true;
+               }else{
+                   return false;
+               }
+
+            }
+
+
+
+
+
+
+
+
             $(function () {
                 $('input[name="daterange"]').daterangepicker({
                     opens: 'left'
@@ -92,21 +110,35 @@
 
                     })
                         .done(function (result) {
-                            // alert( "second success" );
-                            data[0].values = result.currentHashrates;
-                            data[1].values = result.averageHashrates;
-                            data[2].values = result.activeWorkers;
-                            data[3].values = result.validShares;
-                            data[4].values = result.staleShares;
 
+                            var currentHashrateIndex = data.findIndex(getIndexInGraphElement, "Current Hashrate");
+                            if (currentHashrateIndex !== -1) {
+                                data[currentHashrateIndex].values = result.currentHashrates;
+                            }
+                            var avgHashrateIndex = data.findIndex(getIndexInGraphElement, "Average Hashrate");
+                            if (avgHashrateIndex !== -1) {
+                                data[avgHashrateIndex].values = result.averageHashrates;
+                            }
+
+                            var activeWorkersIndex = data.findIndex(getIndexInGraphElement, "Active workers");
+                            if (activeWorkersIndex !== -1) {
+                                data[activeWorkersIndex].values = result.activeWorkers;
+
+                            }
+                            var validSharesIndex = data.findIndex(getIndexInGraphElement, "Valid Shares");
+                            if (validSharesIndex !== -1) {
+                                data[validSharesIndex].values = result.validShares;
+                            }
+                            var staleSharesIndex = data.findIndex(getIndexInGraphElement, "Stale shares");
+                            if (staleSharesIndex !== -1) {
+                                data[staleSharesIndex].values = result.staleShares;
+                            }
                             chart.update();
 
                         })
                         .fail(function () {
                             toastr.error('Cant update graph data');
                         });
-
-
                 });
             });
         </script>
