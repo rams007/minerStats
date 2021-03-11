@@ -190,28 +190,33 @@
                 }
 
                 return [
+                    @if(isset($enabledGraphs['currentHashrate']))
                     {
                         values: {!! $currentHashrates !!},
                         key: "Current Hashrate",
                         color: "#1f77b4",
-                    },
+                    },  @endif
+                        @if(isset($enabledGraphs['avgHashrate']))
                     {
                         values:{!! $averageHashrates !!},
                         key: "Average Hashrate",
                         color: "#fe8d2a"
-                    },
+                    }, @endif
+                        @if(isset($enabledGraphs['activeWorkers']))
                     {
                         values: {!! $activeWorkers !!},
                         key: "Active workers",
                         color: "#2222ff",
                         area: true
-                    },
+                    }, @endif
+                        @if(isset($enabledGraphs['validShares']))
                     {
                         values: {!! $validShares !!},
                         key: "Valid Shares",
                         color: "#c3dec1",
                         strokeWidth: 3.5
-                    },
+                    }, @endif
+                        @if(isset($enabledGraphs['staleShares']))
                     {
                         area: true,
                         values: {!! $staleShares !!},
@@ -219,6 +224,7 @@
                         color: "#EF9CFB",
                         fillOpacity: .1
                     }
+                    @endif
                 ];
             }
 

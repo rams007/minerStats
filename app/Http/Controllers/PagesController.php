@@ -38,6 +38,7 @@ class PagesController extends Controller
         $staleShares = [];
         $averageHashrates = [];
         $activeWorkers = [];
+        $enabledGraphs = HelperController::getEnabledGraphs();
         if (count($allWallets) > 0) {
 
             $sql = "SELECT time,current_hashrate,valid_shares,stale_shares,average_hashrate,active_workers
@@ -60,7 +61,7 @@ class PagesController extends Controller
         return view('dashboard', ['allWallets' => $allWallets, 'today' => $today, 'date1weekAgo' => $date1weekAgo,
             'currentHashrates' => json_encode($currentHashrates), 'validShares' => json_encode($validShares),
             'staleShares' => json_encode($staleShares), 'averageHashrates' => json_encode($averageHashrates),
-            'activeWorkers' => json_encode($activeWorkers)
+            'activeWorkers' => json_encode($activeWorkers), 'enabledGraphs' => $enabledGraphs
         ]);
 
     }

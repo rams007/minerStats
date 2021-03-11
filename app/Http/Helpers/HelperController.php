@@ -4,6 +4,8 @@
 namespace App\Http\Helpers;
 
 
+use App\Settings;
+use Illuminate\Support\Facades\Auth;
 use Mailgun\Mailgun;
 
 class HelperController
@@ -34,4 +36,20 @@ class HelperController
         }
 
     }
+
+    public static function getEnabledGraphs()
+    {
+        $user = Auth::user();
+        if (!$user) {
+            return [];
+        }
+        $allSettingsRecords = Settings::where('user_id', $user->id)->where('parametr_val', 1)->get(['parametr_key']);
+        $selectedrecords = [];
+        foreach ($allSettingsRecords as $record) {
+            $selectedrecords[$record->parametr_key] = 1;
+        }
+
+        return $selectedrecords;
+    }
+
 }
