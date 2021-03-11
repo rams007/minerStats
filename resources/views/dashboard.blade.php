@@ -163,34 +163,8 @@
                     })
                 ;
 
-                data = sinAndCos();
-
-                d3.select('#chart1').append('svg')
-                    .datum(data)
-                    .call(chart);
-
-                nv.utils.windowResize(chart.update);
-
-                return chart;
-            });
-
-            function sinAndCos() {
-                var sin = [],
-                    sin2 = [],
-                    cos = [],
-                    rand = [],
-                    rand2 = []
-
-                for (var i = 0; i < 100; i++) {
-                    sin.push({x: i, y: i % 10 == 5 ? null : Math.sin(i / 10)}); //the nulls are to show how defined works
-                    sin2.push({x: i, y: Math.sin(i / 5) * 0.4 - 0.25});
-                    cos.push({x: i, y: .5 * Math.cos(i / 10)});
-                    rand.push({x: i, y: Math.random() / 10});
-                    rand2.push({x: i, y: Math.cos(i / 10) + Math.random() / 10})
-                }
-
-                return [
-                    @if(isset($enabledGraphs['currentHashrate']))
+                data =    [
+                        @if(isset($enabledGraphs['currentHashrate']))
                     {
                         values: {!! $currentHashrates !!},
                         key: "Current Hashrate",
@@ -226,7 +200,19 @@
                     }
                     @endif
                 ];
-            }
+
+                d3.select('#chart1').append('svg')
+                    .datum(data)
+                    .call(chart);
+
+                nv.utils.windowResize(chart.update);
+
+                return chart;
+            });
+
+
+
+
 
         </script>
 
