@@ -66,9 +66,12 @@ Route::get('/auth/fb/redirect', function () {
 Route::get('/auth/fb/callback', 'AuthController@handleFBCallback');
 
 
-Route::get('/privacy',  function () {
+Route::get('/privacy', function () {
     return view('privacy');
 });
-Route::get('/tos',  function () {
+Route::get('/tos', function () {
     return view('tos');
 });
+
+Route::get('/settings', 'PagesController@showSettings');
+Route::post('/settings', 'PagesController@updateSettings');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Helpers\HelperController;
+use App\Settings;
 use App\Wallets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,7 +38,7 @@ class PagesController extends Controller
         $staleShares = [];
         $averageHashrates = [];
         $activeWorkers = [];
-        if (count($allWallets)>0) {
+        if (count($allWallets) > 0) {
 
             $sql = "SELECT time,current_hashrate,valid_shares,stale_shares,average_hashrate,active_workers
                     FROM mining_stats
@@ -192,4 +193,54 @@ class PagesController extends Controller
         }
 
     }
+
+    public function showSettings()
+    {
+        $user = Auth::user();
+        if (!$user) {
+            return redirect('/login');
+        }
+        $allSettingsRecords = Settings::where('user_id', $user->id)->get(['parametr_key', 'parametr_val']);
+        $settings = [
+            'currentHashrate' => 1,
+            'avgHashrate' => 1,
+            'activeWorkers' => 1,
+            'validShares' => 1,
+            'staleShares' => 1,
+        ];
+
+        foreach ($allSettingsRecords as $setting) {
+            $settings[$setting->parametr_key] = $setting->parametr_val;
+        }
+        return view('settings', ['settings' => $settings]);
+    }
+
+    public function updateSettings(Request $request)
+    {
+
+        $user = Auth::user();
+        if (!$user) {
+            return redirect('/login');
+        }
+
+
+        parse_str($request->parametrs, $param);
+
+        $parametrs = [
+            'currentHashrate' => isset($param['currentHashrate']) ? 1 : 0,
+            'avgHashrate' => isset($param['avgHashrate']) ? 1 : 0,
+            'activeWorkers' => isset($param['activeWorkers']) ? 1 : 0,
+            'validShares' => isset($param['validShares']) ? 1 : 0,
+            'staleShares' => isset($param['staleShares']) ? 1 : 0,
+        ];
+
+        foreach ($parametrs as $key => $val) {
+
+            Settings::updateOrCreate(['user_id' => $user->id, 'parametr_key' => $key], ['parametr_val' => $val]);
+
+        }
+        //  return response()->json(['error'=>false]);
+
+    }
+
 }
