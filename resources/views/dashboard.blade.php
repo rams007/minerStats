@@ -4,6 +4,9 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Dashboard Page</h1>
+    <div class="alert alert-info" role="alert">
+        You can select the data to be displayed on the <a href="/settings">settings</a> page
+    </div>
 
     @if($allWallets->count() == 0)
 
@@ -78,21 +81,12 @@
         <script>
 
             function getIndexInGraphElement(element) {
-                console.log(this);
-               if(element.key== this){
-                   return true;
-               }else{
-                   return false;
-               }
-
+                if (element.key == this) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
-
-
-
-
-
-
-
 
             $(function () {
                 $('input[name="daterange"]').daterangepicker({
@@ -108,8 +102,7 @@
 
                     $.post("/graph_data", postData, function () {
 
-                    })
-                        .done(function (result) {
+                    }).done(function (result) {
 
                             var currentHashrateIndex = data.findIndex(getIndexInGraphElement, "Current Hashrate");
                             if (currentHashrateIndex !== -1) {

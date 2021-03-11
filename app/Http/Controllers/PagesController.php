@@ -86,6 +86,9 @@ class PagesController extends Controller
         $averageHashrates = [];
         $activeWorkers = [];
 
+        //@todo exclude  links from query and response
+        $enabledGraphs = HelperController::getEnabledGraphs();
+
         $startTime = $request->startDate . " 00:00:00";
         $endTime = $request->endDate . " 23:59:59";
         $sql = "SELECT time,current_hashrate,valid_shares,stale_shares,average_hashrate,active_workers
