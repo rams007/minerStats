@@ -22,3 +22,8 @@ Route::any('/login', function (Request $request) {
    \Illuminate\Support\Facades\Log::debug(print_r($request->all(),true));
    return response()->json(['error'=>false]);
 });
+
+
+Route::prefix('android')->group(function () {
+    Route::post('/login', 'AuthController@loginAndroid' );
+});

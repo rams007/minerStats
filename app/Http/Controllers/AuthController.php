@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -242,5 +244,31 @@ class AuthController extends Controller
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
+    }
+
+    public function loginAndroid(Request $request)
+    {
+        try {
+            Log::debug(print_r($request->all(), true));
+
+            $request->validate([
+                'email' => 'required|email',
+                'password' => 'required',
+                'device_name' => 'required',
+            ]);
+
+            $user = User::where('email', $request->email)->first();
+
+            if (!$user || !Hash::check($request->password, $user->password)) {
+                throw ValidationException::withMessages([
+                    'email' => ['The provided credentials are incorrect.'],
+                ]);
+            }
+
+            return response()->json(['error' => false, 'token' => $user->createToken($request->device_name)->plainTextToken]);
+        } catch (\Throwable $e) {
+            return response()->json(['error' => true, 'msg' => $e->getMessage()]);
+        }
+
     }
 }
