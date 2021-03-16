@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::any('/login', function (Request $request) {
+   \Illuminate\Support\Facades\Log::debug(print_r($request->all(),true));
+   return response()->json(['error'=>false]);
+});
