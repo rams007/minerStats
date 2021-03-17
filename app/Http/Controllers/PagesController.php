@@ -132,6 +132,23 @@ class PagesController extends Controller
         return view('wallets', ['allWallets' => $allWallets]);
     }
 
+    public function showWalletsAndroid()
+    {
+        $user = Auth::user();
+        if (!$user) {
+            return response()->json(['error' => true, 'msg' => 'User not logined']);
+        } else {
+            $allWallets = Wallets::where('user_id', $user->id)->get(['id', 'wallet']);
+            foreach ($allWallets as $wallet) {
+                $trimed = substr($wallet->wallet, 0, 5);
+                $trimed .= '****';
+                $trimed .= substr($wallet->wallet, -5, 5);
+                $wallet->wallet = $trimed;
+            }
+            return response()->json(['error' => false, 'allWallets' => $allWallets]);
+        }
+    }
+
     public function doWalletActions(Request $request)
     {
         $user = Auth::user();
