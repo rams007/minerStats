@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7566b2f2-8fa2-48db-b58f-138516993d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +218,8 @@
       <workItem from="1614424216849" duration="3661000" />
       <workItem from="1615471120962" duration="11237000" />
       <workItem from="1615906150622" duration="4855000" />
-      <workItem from="1616002559546" duration="1021000" />
+      <workItem from="1616002559546" duration="2356000" />
+      <workItem from="1616089456726" duration="2160000" />
     </task>
     <servers />
   </component>
@@ -232,10 +235,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="294" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1614166682533" />
-    <state x="570" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615487873407">
+    <state x="570" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616091205052">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="570" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1615487873407" />
+    <state x="570" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1616091205052" />
     <state width="1637" height="336" key="GridCell.Tab.0.bottom" timestamp="1614319495411">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -296,9 +299,9 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="486" y="124" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1614279800406" />
-    <state x="539" y="261" width="601" height="488" key="find.popup" timestamp="1615472483897">
+    <state x="539" y="261" width="639" height="488" key="find.popup" timestamp="1616090421493">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="539" y="261" width="601" height="488" key="find.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1615472483897" />
+    <state x="539" y="261" width="639" height="488" key="find.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1616090421493" />
   </component>
 </project>

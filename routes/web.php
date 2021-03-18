@@ -32,7 +32,7 @@ Route::get('/forgot_password', function () {
 
 
 Route::post('/register', 'AuthController@doRegister');
-Route::post('/login', 'AuthController@doLogin');
+Route::post('/login', 'AuthController@doLogin')->name('login');
 Route::post('/forgot_password', 'AuthController@doPasswordRecovery');
 Route::get('/reset-password/{token}', function ($token) {
     return view('reset_password', ['token' => $token]);

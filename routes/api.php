@@ -26,6 +26,6 @@ Route::any('/login', function (Request $request) {
 
 Route::prefix('android')->group(function () {
     Route::post('/login', 'AuthController@loginAndroid' );
-    Route::get('/wallets', 'PagesController@showWalletsAndroid' );
+    Route::middleware('auth:sanctum')->get('/wallets', 'PagesController@showWalletsAndroid' );
 
 });
